@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.css';
+import { connect } from 'react-redux';
+import GifList from "./components/GifList";
+import GifFrom from "./components/GifForm";
 
 function App() {
   return (
