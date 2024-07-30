@@ -1,4 +1,5 @@
 import  data  from "./../data/gifs";
+import { FETCH_START, FETCH_SUCCESS } from "../actions/actionindex";
 
 const initialState = {
     gifs: data,
@@ -8,6 +9,19 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
+        case FETCH_START:
+        return {
+            ...state,
+            loading: true,
+            error:"",
+        }
+        case FETCH_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                gifs: action.payload,
+                error:""
+            }
         default:
             return(state);
     }
