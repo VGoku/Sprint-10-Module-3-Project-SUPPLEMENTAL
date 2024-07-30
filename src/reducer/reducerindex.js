@@ -1,9 +1,9 @@
-import { data } from "./../data/gifs";
+import  data  from "./../data/gifs";
 
 const initialState = {
     gifs: data,
     loading: false,
-    err:""
+    error:""
 }
 
 const reducer = (state = initialState, action) => {
